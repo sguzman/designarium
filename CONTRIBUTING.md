@@ -13,7 +13,7 @@ is worth preserving.
 4. Preserve the original visual direction. Do not auto-replace a liked concept with an
    alternative, nor use one generic layout for unrelated applications.
 5. Open the site, exercise search, filters, lightbox, keyboard navigation and mobile layout.
-6. GitHub Actions validates catalog integrity and publishes the public static gallery.
+6. GitHub Actions validates catalog integrity and browser interactions. GitHub Pages publishes the static site from the main branch.
 
 The repo is an aesthetic archive. ViewWright's source blueprints and application code
 belong in their own repositories; metadata may link to them when useful.
