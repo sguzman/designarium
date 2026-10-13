@@ -1,0 +1,46 @@
+name: Publish Designarium to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable GitHub Pages if permitted
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Validate site catalog and image references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/concepts.json").read_text())
+          assert data, "The gallery must not be empty"
+          assert len({x["id"] for x in data}) == len(data), "Duplicate concept ID"
+          for item in data:
+              image = Path(item["image"].removeprefix("./"))
+              assert image.exists(), f"Missing asset: {image}"
+              assert image.suffix in {".webp", ".png", ".jpg", ".jpeg"}, image
+              assert image.stat().st_size > 100, f"Empty image: {image}"
+          assert Path("index.html").exists()
+          print(f"Validated {len(data)} concepts and image files")
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

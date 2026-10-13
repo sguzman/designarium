@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="Designarium: a public atlas of beautiful, experimental application interfaces. Independent GUI concept art and layout references.">
+  <meta property="og:title" content="Designarium — An atlas of interfaces">
+  <meta property="og:description" content="A curated gallery of interface concepts and aesthetic explorations.">
+  <meta property="og:type" content="website">
+  <title>Designarium — An atlas of interfaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Site navigation">
+      <a class="brand" href="./" aria-label="Designarium home"><span class="brand-symbol" aria-hidden="true">✳</span><span><strong>designarium</strong><small>INTERFACE ATLAS</small></span></a>
+      <div class="aside-label">DISCOVER</div>
+      <nav class="nav" aria-label="Collections">
+        <a class="nav-link selected" href="#gallery" id="all-link"><span aria-hidden="true">◈</span> The gallery <span class="nav-arrow">↗</span></a>
+        <a class="nav-link" href="#ephemeris"><span aria-hidden="true">◷</span> Ephemeris</a>
+      </nav>
+      <div class="aside-label">CURATION</div>
+      <div class="nav subdued" aria-label="Gallery themes"><span class="nav-link static"><span>▧</span> Calendar & time</span><span class="nav-link static"><span>◇</span> Data & intelligence</span><span class="nav-link static"><span>↗</span> New frontiers</span></div>
+      <div class="aside-bottom"><div class="tiny-orb"></div><strong>Built to be explored.</strong><p>Not shipped products. Not generic templates. An evolving public collection of GUI ideas worth keeping.</p><a href="https://github.com/sguzman/designarium" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div>
+    </aside>
+    <main id="main">
+      <header class="topbar"><span class="breadcrumbs">INDEX <span>/</span> VISUAL ARCHIVE</span><div class="top-actions"><span class="availability"><i></i> PUBLIC COLLECTION</span><a href="https://github.com/sguzman/designarium" target="_blank" rel="noopener noreferrer" class="header-link">SOURCE ↗</a></div></header>
+      <section class="intro">
+        <div class="eyebrow"><span class="small-star">✳</span> A CURATED LIBRARY OF DIGITAL FORM</div>
+        <h1>Interfaces worth <em>imagining.</em></h1>
+        <p class="intro-copy">A growing archive of beautiful software: thoughtfully composed dashboards, calendars, workspaces, and interaction ideas. A visual reference for what software <span>could</span> feel like.</p>
+        <div class="intro-meta"><span id="concept-total">01 CONCEPT</span><span class="meta-divider"></span><span>PUBLIC / OPEN</span><span class="meta-divider"></span><span>ART DIRECTION &amp; INTERFACE DESIGN</span></div>
+      </section>
+      <section class="feature" id="ephemeris" aria-labelledby="feature-title">
+        <div class="feature-copy"><div class="eyebrow">001 <span class="slash">/</span> FIRST COLLECTION</div><h2 id="feature-title">Ephemeris<span class="star">✦</span></h2><p>Time, rendered beautifully. From a personal day to the world's unfolding events, a calendar reimagined as a vivid information landscape.</p><div class="chips"><span>CALENDARS</span><span>EVENTS</span><span>REAL-WORLD DATA</span></div><a class="primary-link" href="#gallery">Explore the collection <span aria-hidden="true">↗</span></a></div>
+        <button class="feature-art" id="feature-open" aria-label="Open featured Ephemeris concept"><img id="feature-image" src="./assets/concepts/ephemeris/weekly-planning.webp" alt="Ephemeris dark week calendar user-interface concept" fetchpriority="high"><span class="art-hint">OPEN CONCEPT <b>↗</b></span></button>
+      </section>
+      <section class="browse" id="gallery" aria-labelledby="gallery-heading">
+        <div class="section-heading"><div><div class="eyebrow">THE VISUAL ARCHIVE</div><h2 id="gallery-heading">Selected works<span class="punct">.</span></h2></div><p>Explore what matters in an interface: rhythm, hierarchy, color, density, and atmosphere.</p></div>
+        <div class="controls"><div class="filter-set" id="filters" role="group" aria-label="Filter concept gallery"></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search interfaces…" autocomplete="off" aria-label="Search interface concepts"><kbd>/</kbd></label></div>
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        <div class="empty" id="empty" hidden>No concepts match that search. <button id="reset-filters">Clear filters ↗</button></div>
+      </section>
+      <section class="future"><div><div class="eyebrow">THE IDEA</div><h2>Every application deserves<br><span>its own visual identity.</span></h2></div><p>Designarium is a personal taste archive shared publicly: real projects and imagined projects alike. No enforced template. New explorations can belong to any software category.</p></section>
+      <footer><span>DESIGNARIUM <span class="footer-star">✳</span> AN INTERFACE ATLAS</span><span>CONCEPT ART, NOT PRODUCT SCREENSHOTS · ILLUSTRATIVE DATA</span><a href="https://github.com/sguzman/designarium" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></footer>
+    </main>
+  </div>
+  <dialog id="lightbox" aria-label="Concept artwork viewer">
+    <div class="viewer"><div class="viewer-bar"><div><span class="eyebrow">CONCEPT STUDY <span class="slash">/</span> <span id="viewer-counter"></span></span><h2 id="viewer-title"></h2></div><div class="viewer-buttons"><button id="prev" type="button" aria-label="Previous concept">←</button><button id="next" type="button" aria-label="Next concept">→</button><button id="close" type="button" aria-label="Close image viewer">✕</button></div></div><div class="viewer-stage"><img id="viewer-image" alt=""></div><div class="viewer-footer"><p id="viewer-description"></p><div><a id="full-link" target="_blank" rel="noopener noreferrer">Open original ↗</a><a id="source-link" target="_blank" rel="noopener noreferrer">View metadata ↗</a></div></div></div>
+  </dialog>
+</body>
+</html>

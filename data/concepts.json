@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ephemeris-weekly-planning",
+    "title": "The Week in Focus",
+    "project": "Ephemeris",
+    "kind": "Calendar / Week",
+    "description": "An information-rich five-day calendar in midnight blue, with event color hierarchies and a wide event-detail drawer. A study in balancing density with clarity.",
+    "tags": [
+      "Calendar & Time",
+      "Dark",
+      "Productivity",
+      "Dashboard"
+    ],
+    "image": "./assets/concepts/ephemeris/weekly-planning.webp",
+    "alt": "Full-resolution Ephemeris dark weekly planning calendar concept with detailed event drawer",
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "order": 1,
+    "published": true,
+    "date": "2026-10-13",
+    "content_status": "Illustrative design content; not a live calendar, not verified event data",
+    "provenance": "Generated concept art in ChatGPT; image supplied by project owner"
+  }
+]
