@@ -1,0 +1,47 @@
+name: Test Designarium gallery
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install headless browser for autonomous QA
+        run: |
+          npm install --no-audit --no-fund --ignore-scripts
+          npx playwright install chromium --with-deps
+      - name: Validate source and image metadata
+        run: |
+          node --check app.js
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          concepts=json.loads(Path('data/concepts.json').read_text())
+          assert len(concepts)>=6
+          assert len({x['id'] for x in concepts})==len(concepts)
+          for c in concepts:
+              path=Path(c['image'].removeprefix('./'))
+              assert path.is_file(),path
+              assert path.stat().st_size>10_000,path
+              assert c['alt'] and c['description'] and c['provenance'] and c['content_status']
+          print(f'Validated {len(concepts)} distinct concepts')
+          PY
+      - name: Automated browser, interaction, and mobile QA
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/designarium-server.log 2>&1 &
+          node tests/smoke.mjs
+      - name: Store automated screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: designarium-screenshots
+          path: qa-artifacts/
+          if-no-files-found: warn
