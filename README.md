@@ -1,28 +1,73 @@
 # Designarium
 
-**A public gallery of GUI design concepts, dashboards and interface aesthetics.**
+**A public atlas of beautiful application interfaces.**
 
-Designarium is an independent visual reference collection spanning actual Softwarium projects and unrelated application concepts. It collects the layouts, presentation styles, interaction ideas, and visual atmospheres worth keeping.
+Designarium is an independent visual reference collection. It archives layouts, information
+hierarchies, visual treatments and interaction ideas for software the curator is building,
+as well as imagined and unrelated applications. Every project should have its own visual
+identity; this is not a template library.
 
-The first collection is **Ephemeris**: six distinct calendar and real-world event dashboard concepts, including macroeconomics, finance, diplomacy, sports, weekly scheduling, and a daily timeline.
+## First collection — Ephemeris
 
-Concept images are AI-generated visual studies, **not** working application screenshots and **not** verified historical or live data. The source imagery is preserved with image metadata for every concept.
+Ephemeris explores dense temporal information in different visual languages. These six
+high-resolution concepts were selected for the gallery.
+
+### 01 · The Week in Focus
+
+[![Ephemeris weekly planning, dark calendar with selected-event drawer](assets/concepts/ephemeris/weekly-planning.webp)](assets/concepts/ephemeris/weekly-planning.webp)
+
+### The world on a calendar
+
+| Macro & Markets | World Affairs |
+| --- | --- |
+| [![Ephemeris macroeconomics and finance calendar](assets/concepts/ephemeris/macro-markets.webp)](assets/concepts/ephemeris/macro-markets.webp) | [![Ephemeris diplomacy and geopolitical events calendar](assets/concepts/ephemeris/world-affairs.webp)](assets/concepts/ephemeris/world-affairs.webp) |
+| **Economics, finance and market events** | **Politics, diplomacy and world affairs** |
+
+| Sports Radar | The Day Command Center |
+| --- | --- |
+| [![Ephemeris multi-sport schedule and live scoreboard](assets/concepts/ephemeris/sports-radar.webp)](assets/concepts/ephemeris/sports-radar.webp) | [![Ephemeris dark daily schedule and event-inspector dashboard](assets/concepts/ephemeris/daily-command.webp)](assets/concepts/ephemeris/daily-command.webp) |
+| **Sports schedules, live-score layout and standings** | **Focused day planning, source status and week pulse** |
+
+### A Quieter Day
+
+[![Ephemeris light editorial daily calendar](assets/concepts/ephemeris/daily-calendar.webp)](assets/concepts/ephemeris/daily-calendar.webp)
+
+> **Visual studies, not screenshots of working products.** All depicted events,
+> market values, diplomatic meetings, scores, dates, participants, source-health
+> indicators and other factual content are illustrative, not verified or live data.
 
 ## Website
 
-The static gallery is published with GitHub Pages using the workflow at `.github/workflows/pages.yml`. If GitHub Pages has not been enabled for this repository, select **GitHub Actions** under repository **Settings → Pages → Build and deployment**.
+[The static gallery](index.html) includes image lightboxes, keyboard controls, a
+searchable catalog, tags, responsive layout and per-concept metadata.
 
-## Development
+The site is configured for free publication on GitHub Pages at
+`https://sguzman.github.io/designarium/`. **GitHub Pages must be enabled by the
+repository owner under Settings → Pages → Build and deployment → Source: GitHub Actions**
+before the URL becomes available. The GitHub API integration cannot enable that setting.
 
-No framework, package manager, runtime, paid service, or API key is required. Open `index.html` in a browser for a simple local preview, or serve the repository root through an HTTP static server.
+After Pages is enabled, a push to `main` automatically deploys the gallery.
+The browser smoke-test workflow separately produces desktop/mobile screenshots and checks
+the six concept images, filtering, search and fullscreen viewer.
 
-Project and concept metadata live in `data/concepts.json`. Add image files under `assets/concepts/<project>/`; the gallery reads the catalog and auto-builds the navigation and search index.
+## Extend the atlas
 
-## Relationship to other projects
+- Website: `index.html`, `style.css`, `app.js`.
+- Gallery metadata: `data/concepts.json`.
+- Image assets: `assets/concepts/<project>/<slug>.webp`.
+- Publication: `.github/workflows/pages.yml`.
+- Browser QA: `.github/workflows/qa.yml`, `tests/smoke.mjs`.
+- Curatorial rules: [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md).
 
-- **Designarium** explores and catalogs visual concepts.
-- **ViewWright** authors toolkit-independent GUI semantics and previews.
-- **Applications** implement the interfaces.
-- **ViewWitness** verifies actual rendered interface behavior.
+To preview locally on Linux from the repository root, run
+`python3 -m http.server 8000` and open `http://localhost:8000`. The gallery
+reads its JSON catalog over HTTP (opening the file directly may be blocked by browsers).
 
-Image generation does not replace executable UI implementation.
+## Architecture
+
+- **Designarium:** Visual concepts and aesthetic references.
+- **ViewWright:** Declarative GUI design and rendering semantics.
+- **Applications:** Implementation.
+- **ViewWitness:** Observational verification.
+
+The website is static, without a database, accounts, analytics, or paid hosting.
