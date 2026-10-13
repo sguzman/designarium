@@ -41,21 +41,22 @@ high-resolution concepts were selected for the gallery.
 [The static gallery](index.html) includes image lightboxes, keyboard controls, a
 searchable catalog, tags, responsive layout and per-concept metadata.
 
-The site is configured for free publication on GitHub Pages at
-`https://sguzman.github.io/designarium/`. **GitHub Pages must be enabled by the
-repository owner under Settings → Pages → Build and deployment → Source: GitHub Actions**
-before the URL becomes available. The GitHub API integration cannot enable that setting.
+**Public gallery:** https://sguzman.github.io/designarium/
 
-After Pages is enabled, a push to `main` automatically deploys the gallery.
-The browser smoke-test workflow separately produces desktop/mobile screenshots and checks
-the six concept images, filtering, search and fullscreen viewer.
+GitHub Pages is enabled and GitHub's native **pages build and deployment** run
+successfully published the site on October 13, 2026. Publishing uses the repository
+root on `main`; further pushes automatically trigger deployment.
+
+The independent `Test Designarium gallery` workflow produces desktop/mobile
+screenshots and checks all six concept images, filtering, search and fullscreen viewing.
+This automated check has passed.
 
 ## Extend the atlas
 
 - Website: `index.html`, `style.css`, `app.js`.
 - Gallery metadata: `data/concepts.json`.
 - Image assets: `assets/concepts/<project>/<slug>.webp`.
-- Publication: `.github/workflows/pages.yml`.
+- Publication: native GitHub Pages branch deployment from `main`.
 - Browser QA: `.github/workflows/qa.yml`, `tests/smoke.mjs`.
 - Curatorial rules: [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md).
 
