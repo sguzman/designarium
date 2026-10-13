@@ -25,3 +25,15 @@ dialog{background:#080b10;color:var(--text);border:1px solid #34435a;border-radi
 .spotlight-content .primary-link{background:#bfb6fa;color:#17142e}
 .spotlight-content .primary-link:hover{background:#e5deff}
 @media(max-width:800px){.spotlight{grid-template-columns:1fr}.spotlight-art{min-height:220px;max-height:330px}.spotlight-art:after{background:linear-gradient(0deg,#19172c44,transparent 35%)}.spotlight-content{padding:28px}}
+
+/* Chatarium's editorial spotlight reverses the artwork and uses a colder teal/cobalt palette. */
+.chatarium-spotlight{grid-template-columns:42% 58%;background:radial-gradient(circle at 25% 35%,#123744,#0d1827 72%);border-color:rgba(113,202,211,.25)}
+.chatarium-spotlight .spotlight-art{order:2}
+.chatarium-spotlight .spotlight-art:after{background:linear-gradient(270deg,transparent 72%,#112b36a8)}
+.chatarium-spotlight .spotlight-content{order:1}
+.chatarium-spotlight .spotlight-content .eyebrow{color:#83d6d9}
+.chatarium-spotlight .spotlight-content .chips span{border-color:#315f66;color:#9cdbdf}
+.chatarium-spotlight .spotlight-content .star{color:#79cdd9}
+.chatarium-spotlight .spotlight-content .primary-link{background:#9cd9dc;color:#08252d}
+.chatarium-spotlight .spotlight-content .primary-link:hover{background:#c8f1f2}
+@media(max-width:800px){.chatarium-spotlight{grid-template-columns:1fr}.chatarium-spotlight .spotlight-art{order:0}.chatarium-spotlight .spotlight-content{order:1}}

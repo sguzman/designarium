@@ -188,5 +188,74 @@
     "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
     "content_status": "Visual concept only: fictional game names, screenshots, save history, menus and product features are illustrative and are not live or implemented.",
     "provenance": "Original AI-generated Starbyte interface concept selected by the project owner; original 1448×1086 image preserved in optimized WebP form."
+  },
+  {
+    "id": "chatarium-financial-analysis",
+    "title": "The Moonlit Workspace",
+    "project": "Chatarium",
+    "kind": "Local Chat / Inspector",
+    "description": "A luminous local-first conversation workspace with blue user messages, green agent reasoning, amber MCP results, attached data, and a detailed timing-and-provenance inspector.",
+    "tags": [
+      "Chatarium",
+      "AI Chat",
+      "MCP",
+      "Local First",
+      "Observability",
+      "Dark"
+    ],
+    "image": "./assets/concepts/chatarium/neon-financial-analysis.webp",
+    "alt": "Chatarium cobalt glass chat dashboard showing Q3 financial analysis, user and agent messages, an inline amber MCP tool result, latency timeline and attachment inspector.",
+    "order": 10,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept, not a functional Chatarium screenshot. Chat content, tool calls, file names, latency values, source references, models and feature states are illustrative only.",
+    "provenance": "Original AI-generated Chatarium interface study selected by the project owner; 1448×1086 image preserved as an optimized WebP."
+  },
+  {
+    "id": "chatarium-observability-console",
+    "title": "Signal & Trace",
+    "project": "Chatarium",
+    "kind": "Agent Console / Observability",
+    "description": "A dense and keyboard-driven agent workstation that keeps MCP input and output in the transcript, with a live event timeline, runtime graphs and searchable provenance.",
+    "tags": [
+      "Chatarium",
+      "AI Chat",
+      "MCP",
+      "Developer Tools",
+      "Observability",
+      "Dark"
+    ],
+    "image": "./assets/concepts/chatarium/observability-console.webp",
+    "alt": "Chatarium developer observability UI with blue user messages, green agent output, a violet MCP tool call, latency graphs, and live event provenance.",
+    "order": 11,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept, not a functional Chatarium screenshot. Chat content, tool calls, file names, latency values, source references, models and feature states are illustrative only.",
+    "provenance": "Original AI-generated Chatarium interface study selected by the project owner; 1448×1086 image preserved as an optimized WebP."
+  },
+  {
+    "id": "chatarium-quiet-conversation",
+    "title": "The Quiet Conversation",
+    "project": "Chatarium",
+    "kind": "Conversation / Editorial",
+    "description": "An immersive reading-first AI conversation with elegant long-form responses, embedded tables and sources, visible tool results, a subdued session context drawer and local history.",
+    "tags": [
+      "Chatarium",
+      "AI Chat",
+      "MCP",
+      "Reading",
+      "Local First",
+      "Dark"
+    ],
+    "image": "./assets/concepts/chatarium/kyoto-conversation.webp",
+    "alt": "Chatarium editorial dark conversation with Kyoto travel itinerary, image-rich response, budget table, visible purple web tool result and context inspector.",
+    "order": 12,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept, not a functional Chatarium screenshot. Chat content, tool calls, file names, latency values, source references, models and feature states are illustrative only.",
+    "provenance": "Original AI-generated Chatarium interface study selected by the project owner; 1448×1086 image preserved as an optimized WebP."
   }
 ]

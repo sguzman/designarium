@@ -1,92 +1,46 @@
 # Designarium
 
-**A public atlas of beautiful application interfaces.**
+A public atlas of beautiful application interfaces — visual studies for both real
+software projects and imagined products. Designarium is an aesthetic reference
+gallery, **not** a UI component library or a collection of working app screenshots.
 
-Designarium is an independent visual reference collection. It archives layouts, information
-hierarchies, visual treatments and interaction ideas for software the curator is building,
-as well as imagined and unrelated applications. Every project should have its own visual
-identity; this is not a template library.
+**[Explore the public gallery](https://sguzman.github.io/designarium/)**
 
-## First collection — Ephemeris
+## Collections
 
-Ephemeris explores dense temporal information in different visual languages. These six
-high-resolution concepts were selected for the gallery.
+- **Ephemeris** — calendars, market events, diplomacy, sports, and temporal intelligence.
+- **Starbyte** — game libraries, emulator interfaces, and preservation workspaces.
+- **Chatarium** — local-first AI chat, tool transparency, and conversation observability.
 
-### 01 · The Week in Focus
+The artwork lives in the [gallery](https://sguzman.github.io/designarium/),
+not in this README. The searchable catalog, full-resolution images, descriptions,
+and provenance are maintained in [`data/concepts.json`](data/concepts.json).
 
-[![Ephemeris weekly planning, dark calendar with selected-event drawer](assets/concepts/ephemeris/weekly-planning.webp)](assets/concepts/ephemeris/weekly-planning.webp)
+## Contributing concepts
 
-### The world on a calendar
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the gallery asset and metadata format.
+Images are stored at `assets/concepts/<project>/<slug>.webp` and are not
+replaced without preserving the selected design.
 
-| Macro & Markets | World Affairs |
-| --- | --- |
-| [![Ephemeris macroeconomics and finance calendar](assets/concepts/ephemeris/macro-markets.webp)](assets/concepts/ephemeris/macro-markets.webp) | [![Ephemeris diplomacy and geopolitical events calendar](assets/concepts/ephemeris/world-affairs.webp)](assets/concepts/ephemeris/world-affairs.webp) |
-| **Economics, finance and market events** | **Politics, diplomacy and world affairs** |
+## Development
 
-| Sports Radar | The Day Command Center |
-| --- | --- |
-| [![Ephemeris multi-sport schedule and live scoreboard](assets/concepts/ephemeris/sports-radar.webp)](assets/concepts/ephemeris/sports-radar.webp) | [![Ephemeris dark daily schedule and event-inspector dashboard](assets/concepts/ephemeris/daily-command.webp)](assets/concepts/ephemeris/daily-command.webp) |
-| **Sports schedules, live-score layout and standings** | **Focused day planning, source status and week pulse** |
+Static HTML/CSS/JS; no database, build framework, or paid services.
 
-### A Quieter Day
+```sh
+python3 -m http.server 8000
+```
 
-[![Ephemeris light editorial daily calendar](assets/concepts/ephemeris/daily-calendar.webp)](assets/concepts/ephemeris/daily-calendar.webp)
+Then visit http://localhost:8000. GitHub Pages publishes `main` automatically.
+Headless browser and image-integrity tests run in
+[GitHub Actions](.github/workflows/qa.yml).
 
-> **Visual studies, not screenshots of working products.** All depicted events,
-> market values, diplomatic meetings, scores, dates, participants, source-health
-> indicators and other factual content are illustrative, not verified or live data.
+Stewardship rules: [AGENTS.md](AGENTS.md).
 
-## Second collection — Starbyte
+## Boundaries
 
-Starbyte explores the visual identity of a desktop 16-bit console emulator and local
-game preservation library. These three selected, high-resolution visual concepts
-are fictional interface studies (not emulator screenshots or shipped features):
+All artworks are illustrative AI-generated design concepts. Depicted events,
+scores, prices, tool traces, models, attachments, software features, and status
+indicators are not verified live data or proof of implemented functionality.
 
-| The Celestial Library | Sky Archive — Player Theater |
-| --- | --- |
-| [![Starbyte neon library with original illustrated retro covers](assets/concepts/starbyte/neon-library.webp)](assets/concepts/starbyte/neon-library.webp) | [![Starbyte fictional pixel-art player theater with save, audio and video controls](assets/concepts/starbyte/sky-archive-player.webp)](assets/concepts/starbyte/sky-archive-player.webp) |
-| **Library / launcher** | **Now-playing / emulator controls** |
-
-### The Midnight Collection
-
-[![Starbyte warm gold archival digital museum with cartridge, manual, save history and preservation cards](assets/concepts/starbyte/midnight-collection.webp)](assets/concepts/starbyte/midnight-collection.webp)
-
-All fictional games, artwork, emulation features, saved data and provenance indicators
-shown in these images are illustrative concept material.
-
-## Website
-
-[The static gallery](index.html) includes image lightboxes, keyboard controls, a
-searchable catalog, tags, responsive layout and per-concept metadata.
-
-**Public gallery:** https://sguzman.github.io/designarium/
-
-GitHub Pages is enabled and GitHub's native **pages build and deployment** run
-successfully published the site on October 13, 2026. Publishing uses the repository
-root on `main`; further pushes automatically trigger deployment.
-
-The independent `Test Designarium gallery` workflow produces desktop/mobile
-screenshots and checks all nine concept images, filtering, search and fullscreen viewing.
-This automated check has passed.
-
-## Extend the atlas
-
-- Website: `index.html`, `style.css`, `app.js`.
-- Gallery metadata: `data/concepts.json`.
-- Image assets: `assets/concepts/<project>/<slug>.webp`.
-- Publication: native GitHub Pages branch deployment from `main`.
-- Browser QA: `.github/workflows/qa.yml`, `tests/smoke.mjs`.
-- Curatorial rules: [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md).
-
-To preview locally on Linux from the repository root, run
-`python3 -m http.server 8000` and open `http://localhost:8000`. The gallery
-reads its JSON catalog over HTTP (opening the file directly may be blocked by browsers).
-
-## Architecture
-
-- **Designarium:** Visual concepts and aesthetic references.
-- **ViewWright:** Declarative GUI design and rendering semantics.
-- **Applications:** Implementation.
-- **ViewWitness:** Observational verification.
-
-The website is static, without a database, accounts, analytics, or paid hosting.
+Designarium explores visual direction; ViewWright formalizes GUIs;
+applications implement them; ViewWitness verifies real renderings.

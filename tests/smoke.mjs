@@ -15,11 +15,12 @@ try {
     }
   });
   await page.goto(base, { waitUntil: 'networkidle' });
-  await page.waitForFunction(() => document.querySelectorAll('.gallery-card').length === 9);
-  assert.equal(await page.locator('.gallery-card').count(), 9, 'Six Ephemeris and three Starbyte concepts must be visible');
+  await page.waitForFunction(() => document.querySelectorAll('.gallery-card').length === 12);
+  assert.equal(await page.locator('.gallery-card').count(), 12, 'Six Ephemeris, three Starbyte and three Chatarium concepts must be visible');
   assert.match(await page.title(), /Designarium/);
   assert.equal(await page.locator('img[src*="ephemeris"]').count(), 7);
   assert.equal(await page.locator('img[src*="starbyte"]').count(), 4);
+  assert.equal(await page.locator('img[src*="chatarium"]').count(), 4);
   await page.locator('.nav-link[data-project="Starbyte"]').click();
   assert.equal(await page.locator('.gallery-card').count(), 3, 'Starbyte collection must show three concepts');
   await page.locator('.gallery-card [data-open]').first().click();
@@ -28,6 +29,16 @@ try {
   assert.match(await page.locator('#viewer-title').innerText(), /Sky Archive/);
   await page.locator('#next').click();
   assert.match(await page.locator('#viewer-title').innerText(), /Midnight Collection/);
+  await page.locator('#close').click();
+  await page.locator('#all-link').click();
+  await page.locator('.nav-link[data-project="Chatarium"]').click();
+  assert.equal(await page.locator('.gallery-card').count(), 3, 'Chatarium collection must show three concepts');
+  await page.locator('.gallery-card [data-open]').first().click();
+  assert.match(await page.locator('#viewer-title').innerText(), /Moonlit Workspace/);
+  await page.locator('#next').click();
+  assert.match(await page.locator('#viewer-title').innerText(), /Signal & Trace/);
+  await page.locator('#next').click();
+  assert.match(await page.locator('#viewer-title').innerText(), /Quiet Conversation/);
   await page.locator('#close').click();
   await page.locator('#all-link').click();
   for (const image of await page.locator('.gallery-card img').all()) {
@@ -55,7 +66,7 @@ try {
 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.screenshot({ path: 'qa-artifacts/gallery-mobile.png', fullPage: true });
-  assert.equal(await page.locator('.gallery-card').count(), 9);
+  assert.equal(await page.locator('.gallery-card').count(), 12);
   const horizontalOverflow = await page.evaluate(() =>
     document.documentElement.scrollWidth > window.innerWidth + 2
   );
