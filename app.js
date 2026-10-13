@@ -9,6 +9,7 @@
   let collection = [];
   let visible = [];
   let activeTag = "All";
+  let activeProject = "All";
   let activeIndex = 0;
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const conceptById = (id) => collection.find((item) => item.id === id);
@@ -16,6 +17,7 @@
   const filteredConcepts = () => {
     const term = search.value.trim().toLocaleLowerCase();
     return collection.filter((item) => {
+      if (activeProject !== "All" && item.project !== activeProject) return false;
       if (activeTag !== "All" && !item.tags.includes(activeTag)) return false;
       const haystack = [item.title, item.project, item.description, ...item.tags].join(" ").toLocaleLowerCase();
       return haystack.includes(term);
@@ -23,8 +25,9 @@
   };
 
   function renderFilters() {
-    const counts = new Map([["All",collection.length]]);
-    for (const c of collection) for (const tag of c.tags) counts.set(tag,(counts.get(tag)||0)+1);
+    const projectItems=collection.filter(c=>activeProject==="All" || c.project===activeProject);
+    const counts = new Map([["All",projectItems.length]]);
+    for (const c of projectItems) for (const tag of c.tags) counts.set(tag,(counts.get(tag)||0)+1);
     if (activeTag!=="All" && !counts.has(activeTag)) activeTag="All";
     filters.replaceChildren();
     for (const [name,count] of counts) {
@@ -75,14 +78,29 @@
     if(button)openConcept(button.dataset.open);
   });
   $("#feature-open").addEventListener("click",()=>{
-    if(collection.length){ if(!visible.some(item=>item.id===collection[0].id)){activeTag="All";search.value="";renderFilters();renderGallery()} openConcept(collection[0].id); }
+    if(collection.length){ if(!visible.some(item=>item.id===collection[0].id)){activeTag="All";activeProject="All";search.value="";renderFilters();renderGallery()} openConcept(collection[0].id); }
   });
   $("#close").onclick=()=>dialog.close();
   $("#prev").onclick=()=>step(-1);
   $("#next").onclick=()=>step(1);
   dialog.addEventListener("click",(event)=>{if(event.target===dialog)dialog.close()});
   search.addEventListener("input",renderGallery);
-  $("#reset-filters").onclick=()=>{activeTag="All";search.value="";renderFilters();renderGallery()};
+  function selectProject(name) {
+    activeProject=name;
+    activeTag="All";
+    search.value="";
+    document.querySelectorAll(".nav-link[data-project]").forEach(link => {
+      link.classList.toggle("selected",link.dataset.project===name);
+    });
+    $("#all-link").classList.toggle("selected",name==="All");
+    renderFilters();
+    renderGallery();
+  }
+  document.querySelectorAll("[data-project]").forEach(link=>{
+    link.addEventListener("click",()=>selectProject(link.dataset.project));
+  });
+  $("#all-link").addEventListener("click",()=>selectProject("All"));
+  $("#reset-filters").onclick=()=>selectProject("All");
   document.addEventListener("keydown",(event)=>{
     if(dialog.open){if(event.key==="ArrowRight")step(1);if(event.key==="ArrowLeft")step(-1);return}
     if(event.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement?.tagName)){event.preventDefault();search.focus()}

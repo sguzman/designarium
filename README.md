@@ -36,6 +36,24 @@ high-resolution concepts were selected for the gallery.
 > market values, diplomatic meetings, scores, dates, participants, source-health
 > indicators and other factual content are illustrative, not verified or live data.
 
+## Second collection — Starbyte
+
+Starbyte explores the visual identity of a desktop 16-bit console emulator and local
+game preservation library. These three selected, high-resolution visual concepts
+are fictional interface studies (not emulator screenshots or shipped features):
+
+| The Celestial Library | Sky Archive — Player Theater |
+| --- | --- |
+| [![Starbyte neon library with original illustrated retro covers](assets/concepts/starbyte/neon-library.webp)](assets/concepts/starbyte/neon-library.webp) | [![Starbyte fictional pixel-art player theater with save, audio and video controls](assets/concepts/starbyte/sky-archive-player.webp)](assets/concepts/starbyte/sky-archive-player.webp) |
+| **Library / launcher** | **Now-playing / emulator controls** |
+
+### The Midnight Collection
+
+[![Starbyte warm gold archival digital museum with cartridge, manual, save history and preservation cards](assets/concepts/starbyte/midnight-collection.webp)](assets/concepts/starbyte/midnight-collection.webp)
+
+All fictional games, artwork, emulation features, saved data and provenance indicators
+shown in these images are illustrative concept material.
+
 ## Website
 
 [The static gallery](index.html) includes image lightboxes, keyboard controls, a
@@ -48,7 +66,7 @@ successfully published the site on October 13, 2026. Publishing uses the reposit
 root on `main`; further pushes automatically trigger deployment.
 
 The independent `Test Designarium gallery` workflow produces desktop/mobile
-screenshots and checks all six concept images, filtering, search and fullscreen viewing.
+screenshots and checks all nine concept images, filtering, search and fullscreen viewing.
 This automated check has passed.
 
 ## Extend the atlas

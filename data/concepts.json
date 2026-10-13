@@ -122,5 +122,71 @@
     "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
     "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
     "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "starbyte-neon-library",
+    "title": "The Celestial Library",
+    "project": "Starbyte",
+    "kind": "Game Library / Launcher",
+    "description": "A luminous SNES-era game library: immersive cover art, instant launch controls, recent sessions and a right-hand game dossier. Midnight-indigo atmosphere with a collector's sensibility.",
+    "tags": [
+      "Starbyte",
+      "Gaming",
+      "Emulation",
+      "Library",
+      "Dark"
+    ],
+    "image": "./assets/concepts/starbyte/neon-library.webp",
+    "alt": "Starbyte neon-purple library dashboard with original fictional game covers, a large selected-game detail panel and recent save state cards",
+    "order": 7,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only: fictional game names, screenshots, save history, menus and product features are illustrative and are not live or implemented.",
+    "provenance": "Original AI-generated Starbyte interface concept selected by the project owner; original 1448×1086 image preserved in optimized WebP form."
+  },
+  {
+    "id": "starbyte-sky-archive-player",
+    "title": "Sky Archive — Player Theater",
+    "project": "Starbyte",
+    "kind": "Emulator / Now Playing",
+    "description": "The active game is the hero. A giant 16-bit-inspired playfield meets lightweight save/load tools, performance controls and a beautiful film-like retro video panel.",
+    "tags": [
+      "Starbyte",
+      "Gaming",
+      "Emulation",
+      "Now Playing",
+      "Dark"
+    ],
+    "image": "./assets/concepts/starbyte/sky-archive-player.webp",
+    "alt": "Starbyte immersive now-playing interface dominated by an original pixel-art floating-islands platformer view, video settings and save tools",
+    "order": 8,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only: fictional game names, screenshots, save history, menus and product features are illustrative and are not live or implemented.",
+    "provenance": "Original AI-generated Starbyte interface concept selected by the project owner; original 1448×1086 image preserved in optimized WebP form."
+  },
+  {
+    "id": "starbyte-midnight-collection",
+    "title": "The Midnight Collection",
+    "project": "Starbyte",
+    "kind": "Game Preservation / Archive",
+    "description": "A digital museum of games with fine-grained metadata, cartridge preservation, game manuals, play history, controller profiles and verified save data. Warm gold against blue-black.",
+    "tags": [
+      "Starbyte",
+      "Gaming",
+      "Archive",
+      "Preservation",
+      "Dark"
+    ],
+    "image": "./assets/concepts/starbyte/midnight-collection.webp",
+    "alt": "Starbyte golden-accented game preservation collection with original fictional retro game box art, cartridge archive and metadata modules",
+    "order": 9,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only: fictional game names, screenshots, save history, menus and product features are illustrative and are not live or implemented.",
+    "provenance": "Original AI-generated Starbyte interface concept selected by the project owner; original 1448×1086 image preserved in optimized WebP form."
   }
 ]
