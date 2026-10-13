@@ -4,7 +4,7 @@
     "title": "The Week in Focus",
     "project": "Ephemeris",
     "kind": "Calendar / Week",
-    "description": "An information-rich five-day calendar in midnight blue, with event color hierarchies and a wide event-detail drawer. A study in balancing density with clarity.",
+    "description": "Five days of richly layered schedules, luminous event categories and an expansive bottom event dossier. A study in information density without sacrificing elegance.",
     "tags": [
       "Calendar & Time",
       "Dark",
@@ -12,12 +12,115 @@
       "Dashboard"
     ],
     "image": "./assets/concepts/ephemeris/weekly-planning.webp",
-    "alt": "Full-resolution Ephemeris dark weekly planning calendar concept with detailed event drawer",
-    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "alt": "Dark Ephemeris five-day weekly calendar with multicolored event blocks and detailed bottom event drawer",
     "order": 1,
-    "published": true,
     "date": "2026-10-13",
-    "content_status": "Illustrative design content; not a live calendar, not verified event data",
-    "provenance": "Generated concept art in ChatGPT; image supplied by project owner"
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "ephemeris-macro-markets",
+    "title": "Macro & Markets",
+    "project": "Ephemeris",
+    "kind": "Economics / Finance",
+    "description": "Economic releases, earnings, financial market summaries and Taria source provenance on a single temporal intelligence surface.",
+    "tags": [
+      "Economics",
+      "Finance",
+      "Dark",
+      "Dashboard"
+    ],
+    "image": "./assets/concepts/ephemeris/macro-markets.webp",
+    "alt": "Ephemeris macroeconomics and markets week calendar with sparklines, earnings events, CPI and watchlist panels",
+    "order": 2,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "ephemeris-world-affairs",
+    "title": "World Affairs",
+    "project": "Ephemeris",
+    "kind": "Politics / Diplomacy",
+    "description": "An international affairs calendar organized around regions, institutions and overlapping diplomatic events, with a research dossier alongside.",
+    "tags": [
+      "Politics",
+      "Diplomacy",
+      "Dark",
+      "Dashboard"
+    ],
+    "image": "./assets/concepts/ephemeris/world-affairs.webp",
+    "alt": "Ephemeris World Affairs geopolitics agenda with lanes for United States, Mexico, Europe, China and UN plus diplomacy event dossier",
+    "order": 3,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "ephemeris-sports-radar",
+    "title": "Sports Radar",
+    "project": "Ephemeris",
+    "kind": "Sports / Schedule",
+    "description": "Live-score rhythms, league schedules, fixtures and standings transformed into a temporal sports command desk.",
+    "tags": [
+      "Sports",
+      "Dark",
+      "Dashboard"
+    ],
+    "image": "./assets/concepts/ephemeris/sports-radar.webp",
+    "alt": "Ephemeris sports calendar with live NBA NHL tennis MLB Formula One ribbon and game event schedule",
+    "order": 4,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "ephemeris-daily-command",
+    "title": "The Day Command Center",
+    "project": "Ephemeris",
+    "kind": "Calendar / Day",
+    "description": "A richly layered focus-day view with a compact week pulse, readable timeline, source health and contextual event inspector.",
+    "tags": [
+      "Calendar & Time",
+      "Dark",
+      "Productivity",
+      "Dashboard"
+    ],
+    "image": "./assets/concepts/ephemeris/daily-command.webp",
+    "alt": "Dark Ephemeris day planner with seven day summary pulse cards, vertical schedule and Taria source sidebar",
+    "order": 5,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
+  },
+  {
+    "id": "ephemeris-daily-calendar",
+    "title": "A Quieter Day",
+    "project": "Ephemeris",
+    "kind": "Calendar / Day",
+    "description": "A restrained light editorial treatment of the same temporal problem: a selected event, flowing agenda and richly considered typography.",
+    "tags": [
+      "Calendar & Time",
+      "Light",
+      "Productivity"
+    ],
+    "image": "./assets/concepts/ephemeris/daily-calendar.webp",
+    "alt": "Light themed Ephemeris daily calendar with detailed morning run inspector, month strip and pastel agenda",
+    "order": 6,
+    "date": "2026-10-13",
+    "published": true,
+    "source": "https://github.com/sguzman/designarium/blob/main/data/concepts.json",
+    "content_status": "Visual concept only. All shown events, prices, fixtures, scores, times and feeds are illustrative; do not treat as verified or live information.",
+    "provenance": "AI-generated design study selected by the project owner; full resolution preserved in optimized WebP format."
   }
 ]
